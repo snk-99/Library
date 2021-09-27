@@ -15,6 +15,7 @@ const resolvers = {
       if (context.user) {
         const userData = await User.findOne({ _id: context.user._id });
 
+        console.log(userData.savedBooks[1])
         return userData;
       }
       throw new AuthenticationError('You need to be logged in!');
