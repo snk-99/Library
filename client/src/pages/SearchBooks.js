@@ -71,11 +71,10 @@ const SearchBooks = () => {
     }
 
     try {
-      const { data } = await saveBook({
-        variables: { bookData: { ...bookToSave } },
+      // use book mutation to save book 
+      await saveBook({
+        variables: { ...bookToSave },
       });
-      console.log(savedBookIds);
-
 
       // if book successfully saves to user's account, save book id to state
       setSavedBookIds([...savedBookIds, bookToSave.bookId]);
@@ -122,7 +121,11 @@ const SearchBooks = () => {
             return (
               <Card key={book.bookId} border='dark'>
                 {book.image ? (
-                  <Card.Img src={book.image} alt={`The cover for ${book.title}`} variant='top' />
+                  <Card.Img
+                    src={book.image}
+                    alt={`The cover for ${book.title}`}
+                    variant='top'
+                  />
                 ) : null}
                 <Card.Body>
                   <Card.Title>{book.title}</Card.Title>
