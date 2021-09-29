@@ -22,11 +22,13 @@
   3.Node.js is required to run this application. Click here for instructions on installing Node.js.
 
   4.Install the required dependices to your cloned directory in command-line using: npm install
+
+  5.seeder file run npm run seed to seed user 
   ## Mock up
   <img width="1436" alt="screenshot" src="./client/public/homepage.png">
 
   ## Test
-  N/A
+   
    ## Questions
   Contact me for any questions!!
   * Contact Email: kahurasamuel@gmail.com
